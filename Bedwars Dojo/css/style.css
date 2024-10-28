@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lilita One", sans-serif;
+}
+
+body {
+    background-image: url("background.jpg"); /* Ensure this path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+}
+
+
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #333333;
+    --primary-color: #5687d4;
+    --secondary-color: #79a9f5;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+	--red-color: #e33d3d;
+	--purple-color: #6328a6;
+	--black: #000000;
+
+    /* Font sizes */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site max width */
+    --site-max-width: 1300px;
+}
+
+header {
+    background: var(--primary-color);
+}
+
+header {
+    background: var(--primary-color);
+    position: fixed; /* Keeps the header fixed */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it appears above other content */
+}
+
+
+/*hero section*/
+
+.hero-section {
+    min-height: 100vh;
+    margin-top: 60px; /* Adjust according to the height of your header */
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts space between logo and menu */
+    padding: 10px; /* Add some padding */
+}
+
+.navbar .nav-logo img {
+    width: 200px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navbar .nav-menu {
+    display: flex; /* Aligns menu items horizontally */
+    list-style: none; /* Removes default list styles */
+}
+
+.navbar .nav-item {
+    margin: 0 15px; /* Adds space between items */
+}
+
+.navbar .nav-link {
+	padding: 10px 18px;
+	background: var(--secondary-color);
+	border-radius: var(--border-radius-m);
+    color: var(--white-color);
+    text-decoration: none; /* Removes underline from links */
+    font-size: var(--font-size-n); /* Uses defined font size */
+}
+
+.navbar .nav-link:hover {
+    color: var(--secondary-color); /* Changes color on hover */
+	transition:0.3s;
+}
+
+.navbar .nav-link {
+    padding: 10px 18px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    color: var(--white-color);
+    text-decoration: none; /* Removes underline from links */
+    font-size: var(--font-size-n); /* Uses defined font size */
+    text-shadow: 
+        -1px -1px 0 #000, /* Top-left shadow */
+        1px -1px 0 #000,  /* Top-right shadow */
+        -1px 1px 0 #000,  /* Bottom-left shadow */
+        1px 1px 0 #000;   /* Bottom-right shadow */
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center; /* Align logo and text vertically centered */
+    font-size: 28px; /* Adjust the font size for the title */
+    font-weight: bold; /* Make the text bold */
+    color: #000; /* Customize the text color */
+}
+
+.dojo-text {
+    margin-left: 10px; /* Space between the logo and the text */
+    color: var(--red-color); /* Inherit color from the nav-logo */
+}
+
+.nav-logo img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Adds smooth transition */
+}
+
+.nav-logo img:hover {
+    transform: scale(1.1); /* Enlarge image by 10% on hover */
+}
+
+
+
+/* Hero Section Styling */
+
+.hero-section {
+  min-height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  padding: 40px 20px; /* Added padding for responsiveness */
+  background: rgba(14, 12, 13, 0.5); /* Slightly transparent background */
+}
+
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap; /* Allows content to wrap for smaller screens */
+  width: 100%;
+  max-width: 1200px; /* Limits the maximum width */
+  padding: 40px;
+  background: rgba(14, 12, 13, 0.6); /* Semi-transparent background for the section content */
+  border-radius: 10px; /* Smooth corners */
+}
+
+.hero-section .hero-details {
+  color: var(--white-color);
+  flex: 1; /* Ensures the details take up available space */
+}
+
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xxl);
+  color: var(--red-color);
+  font-family: "Lilita One", sans-serif;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Soft, more natural shadow */
+  margin-bottom: 16px;
+}
+
+.hero-section .hero-details .subtitle {
+  margin-top: 8px;
+  max-width: 70%;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--white-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+}
+
+.hero-section .hero-details .description {
+  max-width: 70%;
+  margin: 24px 0 40px;
+  font-size: var(--font-size-m);
+  color: var(--white-color);
+  line-height: 1.6; /* Improves readability */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Softer shadow */
+}
+
+.hero-section .hero-details .buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+}
+
+.hero-section .hero-details .button {
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .button.contact-us {
+  background: transparent;
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+.hero-section .hero-details .button.contact-us:hover {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.hero-section .hero-image-wrapper {
+  flex: 1; /* Ensures the image wrapper takes available space */
+  max-width: 500px; /* Limits the width of the image */
+  text-align: center;
+}
+
+.hero-section .hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Adds rounded corners to the image */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow to the image */
+}
+
+@media (max-width: 768px) {
+  .hero-section .section-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Reduces padding for smaller screens */
+  }
+
+  .hero-section .hero-details, .hero-section .hero-image-wrapper {
+    max-width: 100%; /* Full width for mobile */
+  }
+
+  .hero-section .hero-details .title {
+    font-size: var(--font-size-xl); /* Adjust title font size for smaller screens */
+  }
+
+  .hero-section .hero-details .subtitle, .hero-section .hero-details .description {
+    max-width: 100%; /* Full width for text */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .hero-section .hero-details .buttons {
+    justify-content: center; /* Center buttons on mobile */
+  }
+}
+
+.hero-section .hero-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds rounded corners to the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow to the image */
+    transition: transform 0.3s ease-in-out; /* Adds smooth transition */
+}
+
+.hero-section .hero-image-wrapper img:hover {
+    transform: scale(1.1); /* Enlarge image by 10% on hover */
+}
+
+
+
+
+
+/* Menu section styling */
+.menu-section {
+  color: var(--white-color);
+  background: rgba(14, 12, 13, 0.5);
+  padding: 50px; /* Adjusted to create space around the entire section */
+}
+
+.menu-section .menu-list {
+  display: flex;
+  gap: 30px; /* Reduce gap between menu items */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-section .menu-list .menu-item {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(33.33% - 30px); /* Adjusted to account for padding/gaps */
+  background: rgba(31, 31, 32, 0.7); /* Dark transparent background */
+  padding: 20px; /* Add padding inside the transparent box */
+  border-radius: var(--border-radius-s); /* Optional rounded corners */
+}
+
+/* Image settings */
+.menu-section .menu-list .menu-item .menu-image {
+  width: 100%; /* Use full width of the parent */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensures the images cover the area without distortion */
+  margin-bottom: 15px;
+}
+
+/* Name settings */
+.menu-section .menu-list .menu-item .name {
+  margin: 12px 0;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Text settings */
+.menu-section .menu-list .menu-item .text {
+  font-size: var(--font-size-m);
+  padding: 0 10px; /* Add padding to the text */
+}
+
+/* Title styles */
+.section-title {
+  text-align: center; /* Center the title */
+  font-size: var(--font-size-xl); /* Adjust the size if needed */
+  font-weight: var(--font-weight-bold);
+  margin: 60px 0 30px; /* Add top margin to push it down and bottom margin for spacing */
+  position: relative; /* Ensure positioning context for pseudo-elements if needed */
+  z-index: 1; /* Bring it above any overlapping elements */
+}
+
+/* Sticky header styles */
+.sticky-header {
+  height: 60px; /* Adjust the height of your sticky header */
+  padding: 10px; /* Adjust padding if necessary */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a background to the header */
+  position: fixed; /* Ensure it stays at the top */
+  top: 0;
+  width: 100%; /* Make it full width */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Image settings */
+.menu-section .menu-list .menu-item .menu-image {
+    width: 100%; /* Use full width of the parent */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the images cover the area without distortion */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out; /* Adds smooth transition for scaling */
+}
+
+.menu-section .menu-list .menu-item .menu-image:hover {
+    transform: scale(1.1); /* Enlarge image by 10% on hover */
+}
+
+
+
+/* About section styling */
+
+.about-section {
+    width: 100%; /* Full width */
+    padding: 120px 20px; /* Padding for the section */
+    background: rgba(14, 12, 13, 0.5); /* Background with transparency */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section .section-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsive layout */
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Limits the section content width */
+    width: 100%;
+}
+
+.about-section .about-image-wrapper {
+    flex: 1; /* Ensures image takes up available space */
+    text-align: center; /* Centers the image */
+}
+
+.about-section .about-image-wrapper .about-image {
+    height: 400px;
+    width: 100%;
+    max-width: 400px; /* Ensures the image scales responsively */
+    object-fit: cover;
+    border-radius: 10px; /* Adds rounded corners to the image */
+}
+
+.about-section .about-details {
+    flex: 1; /* Ensures details take up available space */
+    padding: 20px; /* Adds padding inside the details */
+    background: rgba(31, 31, 32, 0.7);
+    border-radius: 10px; /* Adds rounded corners to the container */
+}
+
+.about-section .about-details .section-title {
+    padding: 0;
+    color: #fff; /* Set the font color to white */
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; /* Black outline effect */
+    margin-bottom: 20px; /* Adds margin for spacing */
+    font-size: var(--font-size-xl); /* Title font size */
+    text-align: center;
+    line-height: 1.2; /* Adjusts line height for clarity */
+}
+
+.about-section .about-details .text {
+    line-height: 1.6;
+    margin: 30px 0;
+    text-align: center;
+    font-size: var(--font-size-m); /* Set text size from your variables */
+    color: #fff; /* Set the font color to white */
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; /* Black outline effect */
+    padding: 15px; /* Adds padding inside the text for spacing */
+    border-radius: 5px; /* Adds subtle rounded corners */
+}
+
+@media (max-width: 768px) {
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-section .about-details {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        max-width: 100%; /* Full width for image on smaller screens */
+        height: auto; /* Adjusts height for responsiveness */
+    }
+}
+
+.about-section .about-image-wrapper .about-image {
+    height: 400px;
+    width: 100%;
+    max-width: 400px; /* Ensures the image scales responsively */
+    object-fit: cover;
+    border-radius: 10px; /* Adds rounded corners to the image */
+    transition: transform 0.3s ease-in-out; /* Adds smooth transition for scaling */
+}
+
+.about-section .about-image-wrapper .about-image:hover {
+    transform: scale(1.1); /* Enlarge image by 10% on hover */
+}
+
+
+
+/*Error Section*/
+
+.error-section {
+  padding: 120px 20px; /* Add horizontal padding */
+  background: rgba(14, 12, 13, 0.5);
+  text-align: center; /* Center align text */
+}
+
+.error-section .section-content {
+  display: flex;
+  flex-direction: column; /* Change to column layout for centering */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  gap: 50px;
+}
+
+.error-section .error-image-wrapper .error-image {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.error-section .error-details {
+  max-width: 600px; /* Set a max-width for the details */
+  padding: 0 20px; /* Add padding inside the details section */
+}
+
+.error-section .error-details .section-title {
+  padding: 0;
+  color: white; /* Set the font color to white */
+  font-size: 2.5rem; /* Increase the font size */
+  font-weight: bold; /* Make the title bold */
+}
+
+.error-section .error-details .text {
+  color: white; /* Set the font color to white */
+  line-height: 30px;
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: var(--font-size-m);
+  padding: 0 15px; /* Add padding inside the text for spacing */
+}
+
+.error-section .social-link-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.error-section .social-link-list .social-link {
+  color: var(--primary-color);
+  font-size: var(--font-size-l);
+  transition: 0.2s ease;
+}
+
+.error-section .social-link-list .social-link:hover {
+  color: var(--secondary-color);
+}
+
+.error-section .error-image-wrapper .error-image {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Adds smooth transition for scaling */
+}
+
+.error-section .error-image-wrapper .error-image:hover {
+    transform: scale(1.1); /* Enlarge image by 10% on hover */
+}
+
+
+
+/* profile */
+
+.profile-section {
+  padding: 20px; /* Adjusted padding */
+  background-color:  rgba(14, 12, 13, 0.5); /* Background color */
+  color: var(--white-color); /* Text color */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Space between profile and footer */
+}
+
+.profile-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.profile-image-wrapper {
+  flex: 0 0 150px; /* Set fixed width for image */
+  margin-right: 30px; /* Space between image and details */
+}
+
+.profile-image {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular profile picture */
+  border: 3px solid var(--black); /* Optional border */
+}
+
+.profile-details {
+  flex: 1; /* Allow details to take remaining space */
+}
+
+.profile-name {
+  font-size: var(--font-size-xl); /* Font size for name */
+  margin: 0 0 10px; /* Margin below name */
+}
+
+.profile-bio {
+  font-size: var(--font-size-m); /* Font size for bio */
+  margin-bottom: 20px; /* Margin below bio */
+}
+
+.social-links {
+  display: flex; /* Flex for social links */
+  gap: 15px; /* Space between links */
+}
+
+.social-link {
+  color: var(--primary-color); /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-link:hover {
+  color: var(--secondary-color); /* Change color on hover */
+}
+
+/* Footer message */
+.footer-message {
+  text-align: center; /* Center the footer message */
+  font-size: var(--font-size-m); /* Adjust font size */
+  margin-top: 20px; /* Space above message */
+}
+
+.profile-name, .profile-bio, .social-link {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding for inputs */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid var(--black); /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+  background-color: var(--dark-color); /* Background color */
+  color: var(--white-color); /* Text color */
+}
+
+.profile-bio {
+  height: 100px; /* Fixed height for bio textarea */
+  resize: none; /* Prevent resizing */
+}
+
+.profile-section {
+    padding: 20px; /* Adjusted padding */
+    background-color: rgba(14, 12, 13, 0.5); /* Background color */
+    color: var(--white-color); /* Text color */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space between profile and footer */
+    margin-top: 60px; /* Space below the sticky header */
+}
+
+
+/* Log in page styling */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(14, 12, 13, 0.5); /* Change this to match your theme */
+}
+
+.login-container {
+    background-color: rgba(14, 12, 13, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Adjust width as needed */
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.login-form-group {
+    margin-bottom: 15px;
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-input:focus {
+    border-color: #007bff; /* Change focus border color */
+}
+
+.login-submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-signup-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.login-signup-text a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+.login-signup-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* General Reset */
+.signup-page * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body and Container Styles for Signup */
+.signup-page {
+    background-color: rgba(14, 12, 13, 0.5); /* Matches the theme of your site */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* Add space to avoid hitting the header */
+}
+
+.signup-container {
+    background-color: rgba(14, 12, 13, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Adjust width if necessary */
+    margin: auto; /* Centers the container */
+}
+
+/* Title Styling */
+.signup-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Form Group for Signup */
+.signup-form-group {
+    margin-bottom: 15px;
+}
+
+/* Label Styling */
+.signup-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+/* Input Fields */
+.signup-input[type="text"], .signup-input[type="email"], .signup-input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Focus state for input fields */
+.signup-input:focus {
+    border-color: #007bff;
+}
+
+/* Submit Button Styling */
+.signup-submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Text for "Already have an account?" */
+.signup-login-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.signup-login-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-login-text a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
